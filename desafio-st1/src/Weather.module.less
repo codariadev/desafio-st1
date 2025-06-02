@@ -1,0 +1,324 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  background: linear-gradient(#ff7f00, #ffba00);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container__title {
+  text-align: center;
+  color: white;
+  font-size: 3em;
+  padding-top: 2.5em;
+}
+.container__title--small {
+  font-size: 2em;
+  padding-top: 1em;
+}
+
+.weather {
+  background-color: white;
+  margin: 2em 0;
+  padding: 0;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.weather__location {
+  width: 100%;
+  display: flex;
+  padding: 1.5em 2em;
+  font-weight: 700;
+  font-size: 0.8em;
+  justify-content: flex-start;
+}
+.weather__conditioncontainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  gap: 2em;
+}
+.weather__temperature,
+.weather__condition {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0.5rem 0;
+}
+.weather__temperature {
+  font-size: 2.5rem;
+}
+.weather__buttonclear {
+  background-color: white;
+  color: #fb7e00;
+  position: absolute;
+  border: none;
+  font-size: 2em;
+  top: 0;
+  right: 0;
+  padding: 0.2em 0.4em;
+}
+.weather__currentforecast {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1.6em 2em;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+}
+.weather__tempcontainer {
+  display: flex;
+  gap: 1em;
+}
+.weather__min,
+.weather__max {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.weather__content {
+  font-size: 1.3em;
+}
+.weather__seta {
+  padding-bottom: 0.2em;
+  color: #be5f00;
+  font-weight: bold;
+  font-size: 2em;
+}
+.weather__detailsItem {
+  font-size: 1.2em;
+}
+
+.forecastBar {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  justify-content: space-evenly;
+  align-items: center;
+  border-top: 1px solid #be5f00;
+}
+.forecastItem {
+  text-align: center;
+  font-size: 1.4em;
+  padding: 0.4em 0.4em;
+}
+.forecastItem__temp {
+  display: flex;
+  gap: 0.5em;
+  padding: 0.3em 0;
+  color: #be5f00;
+}
+.forecastItem::first-letter {
+  text-transform: uppercase;
+}
+
+.inputcontainer {
+  margin: 4em;
+  position: relative;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+.inputcontainer input {
+  background-color: white;
+  border: none;
+  width: 100%;
+  height: 50px;
+  color: black;
+  font-size: 1em;
+  font-weight: 100;
+  padding-left: 25px;
+}
+.inputcontainer button {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: rgb(85, 85, 85);
+  border: none;
+  cursor: pointer;
+}
+.inputcontainer button svg {
+  fill: rgb(107, 107, 107);
+  width: 20px;
+  height: 20px;
+  padding-right: 1em;
+}
+
+.line {
+  padding-bottom: 50px;
+  width: 50%;
+  border-top: 1px solid white;
+}
+
+.examples {
+  display: flex;
+  gap: 40px;
+  font-size: 1.5em;
+  color: black;
+  flex-direction: column;
+  width: 40%;
+}
+.examples__title {
+  color: white;
+}
+.examples__container {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  gap: 0.6em;
+  flex-wrap: wrap;
+}
+.examples__container thead tr {
+  padding-bottom: 0.5em;
+  display: flex;
+  width: 100%;
+  text-align: center;
+  gap: 0.2em;
+}
+.examples__container thead th {
+  color: #000;
+  font-size: 0.6em;
+  font-weight: 300;
+}
+.examples__container tbody tr {
+  margin: 0;
+  display: flex;
+  gap: 0.2em;
+}
+.examples__container tbody td {
+  padding-bottom: 1em;
+  font-weight: 600;
+  font-size: 0.7em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.examples__container tbody td button {
+  width: 200px;
+  font-weight: 600;
+  font-size: 1em;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.desktopOnly {
+  display: table;
+}
+.mobileOnly {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .desktopOnly {
+    display: none;
+  }
+  .mobileOnly {
+    display: table;
+  }
+
+  .container {
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+  }
+  .container__title {
+    padding: 1em 0.5em;
+    color: white;
+    font-size: 5em;
+    text-align: left;
+  }
+  .container__title--small {
+    font-size: 2em;
+    padding-left: 1em;
+  }
+
+  .weather {
+    width: 100%;
+    align-items: flex-start;
+  }
+  .weather__location {
+    font-size: 1.2em;
+  }
+  .weather__buttonclear {
+    color: #ff7f00;
+  }
+  .weather__seta {
+    color: #ff7f00;
+  }
+
+  .forecastBar {
+    width: 100%;
+  }
+  .forecastItem__temp {
+    color: #ffba00;
+  }
+
+  .inputcontainer {
+    margin: 2em 0 0 0;
+    width: 100%;
+  }
+  .inputcontainer input {
+    width: 90%;
+    font-size: 1.5em;
+  }
+  .inputcontainer button {
+    padding-right: 2.5em;
+  }
+
+  .line {
+    margin-top: 2em;
+    width: 100%;
+  }
+
+  .examples {
+    justify-content: flex-start;
+  }
+  .examples__title {
+    font-size: 2.7em;
+    font-weight: 500;
+    padding: 0 0.5em;
+  }
+  .examples__container {
+    flex-direction: column;
+    padding: 0 1.5em;
+  }
+
+  .tableWrapper thead tr,
+  .tableWrapper tbody tr {
+    display: flex;
+    gap: 1em;
+  }
+  .tableWrapper thead th {
+    font-size: 0.8em;
+    font-weight: 300;
+    color: #000;
+  }
+  .tableWrapper tbody td {
+    padding-bottom: 1em;
+    font-weight: 600;
+    align-items: center;
+    display: flex;
+  }
+  .tableWrapper tbody td button {
+    padding-bottom: 1em;
+    font-size: 1em;
+    border: none;
+    background: none;
+  }
+}
