@@ -1,12 +1,99 @@
-# React + Vite
+# Desafio ST1
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação web desenvolvida como desafio, construída com React e com integração a uma API.
 
-Currently, two official plugins are available:
+🔗 **Demo:** [desafio-st1.vercel.app](https://desafio-st1.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> ✏️ *Complete esta seção com 2 ou 3 frases explicando o que o projeto faz, qual problema resolve e o que era pedido no desafio.*
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🧰 Tecnologias
+
+**Front-end**
+- [React 19](https://react.dev/)
+- [Less](https://lesscss.org/) (estilização, via `craco-less` e `less-loader`)
+- [Font Awesome](https://fontawesome.com/) (ícones)
+- [Axios](https://axios-http.com/) (requisições HTTP)
+
+**Back-end / servidor**
+- [Node.js](https://nodejs.org/)
+- [Express 5](https://expressjs.com/)
+- [CORS](https://github.com/expressjs/cors)
+- [dotenv](https://github.com/motdotla/dotenv) (variáveis de ambiente)
+
+**Build e ferramentas**
+- [CRACO](https://craco.js.org/) (configuração do build)
+- [Vite](https://vite.dev/) (com `@vitejs/plugin-react`)
+- [ESLint 9](https://eslint.org/)
+
+**Deploy**
+- [Vercel](https://vercel.com/)
+
+---
+
+## 🚀 Como rodar o projeto
+
+### 1. Pré-requisitos
+
+- [Node.js](https://nodejs.org/) (versão LTS recomendada)
+- [Git](https://git-scm.com/)
+
+```bash
+node -v
+```
+
+### 2. Clonando o repositório
+
+```bash
+git clone https://github.com/codariadev/desafio-st1.git
+cd desafio-st1
+npm install
+```
+
+### 3. Variáveis de ambiente
+
+O projeto usa um arquivo `.env` na raiz. Confira quais variáveis são necessárias e configure os valores no seu ambiente local.
+
+> ⚠️ **Atenção:** o arquivo `.env` está versionado no repositório. Se ele contiver chaves, tokens ou senhas, remova-o do Git, adicione-o ao `.gitignore` e troque essas credenciais. Para o projeto, prefira manter um `.env.example` só com os nomes das variáveis, sem valores reais.
+
+### 4. Executando
+
+```bash
+npm start
+```
+
+A aplicação abrirá no navegador (por padrão em [http://localhost:3000](http://localhost:3000)).
+
+---
+
+## 📜 Scripts disponíveis
+
+| Comando | O que faz |
+| --- | --- |
+| `npm start` | Inicia o ambiente de desenvolvimento (CRACO) |
+| `npm run build` | Gera a versão de produção na pasta `build` |
+| `npm test` | Executa os testes |
+
+---
+
+## 📁 Estrutura do projeto
+
+```
+desafio-st1/
+├── build/            # Versão de produção gerada
+├── public/           # Arquivos estáticos
+├── src/              # Código-fonte da aplicação
+├── .env              # Variáveis de ambiente
+├── craco.config.cjs  # Configuração do CRACO
+├── eslint.config.js  # Configuração do ESLint
+├── index.html        # HTML base
+├── vite.config.js    # Configuração do Vite
+└── package.json
+```
+
+---
+
+## 👤 Autor
+
+**CodariaDev** ([@codariadev](https://github.com/codariadev))
